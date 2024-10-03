@@ -1,0 +1,89 @@
+GET http://localhost:3000/api/clients
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibG9naW4iOiJkaWFycmExQGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsInByZW5vbSI6Ik5kaWF5ZSIsIm5vbSI6IkRpYXJyYSIsImNsaWVudElkIjoyLCJpYXQiOjE3Mjc2MzA0NTEsImV4cCI6MTcyNzcxNjg1MX0.xCu5f4Wa6qCUgDP_5tvfup3OtLKZWKAqndZacs7IefM
+
+###
+
+POST http://localhost:3000/api/clients
+Accept: multipart/form-data
+Content-Type: multipart/form-data
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjAsImxvZ2luIjoia2hhZGlqYUBnbWFpbC5jb20iLCJyb2xlIjoiQk9VVElRVUlFUiIsInByZW5vbSI6IktoYWRpamEiLCJub20iOiJCYSIsImNsaWVudElkIjo5LCJpYXQiOjE3Mjc2NDQzMzYsImV4cCI6MTcyNzczMDczNn0.ViM615H-4spuNqCnhugJtixcGwKk7d_deIDi8k_NvX4
+
+{
+  "nom": "dada",
+  "prenom": "dudu",
+  "telephone": "760358899",
+  "adresse": "Dakar",
+  "categorieId": 3,
+  "photo": "https://res.cloudinary.com/dnnul9xza/image/upload/v1727643525/clients/xvpiy7nkw9rtjj6s3kws.jpg"
+}
+
+###
+
+PUT http://localhost:3000/api/clients/16
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibG9naW4iOiJtYXJhbWUiLCJyb2xlIjoiQk9VVElRVUlFUiIsInByZW5vbSI6Ik1hcmFtZSIsIm5vbSI6IkJhIiwiY2xpZW50SWQiOjUsImlhdCI6MTcyNjQwNzEyNywiZXhwIjoxNzI2NDkzNTI3fQ.H5o6FHHDKLBm9GuJbeglRPCVENDMQhfDwzgX-RONOJM
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="prenom"
+
+Pathe
+--boundary--
+
+###
+
+DELETE http://localhost:3000/api/clients/62
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibG9naW4iOiJkaWFycmExQGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsInByZW5vbSI6Ik5kaWF5ZSIsIm5vbSI6IkRpYXJyYSIsImNsaWVudElkIjoyLCJpYXQiOjE3Mjc2MzA0NTEsImV4cCI6MTcyNzcxNjg1MX0.xCu5f4Wa6qCUgDP_5tvfup3OtLKZWKAqndZacs7IefM
+
+###
+
+POST http://localhost:3000/api/clients
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibG9naW4iOiJkaWFycmExQGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsInByZW5vbSI6Ik5kaWF5ZSIsIm5vbSI6IkRpYXJyYSIsImNsaWVudElkIjoyLCJpYXQiOjE3Mjc2MzA0NTEsImV4cCI6MTcyNzcxNjg1MX0.xCu5f4Wa6qCUgDP_5tvfup3OtLKZWKAqndZacs7IefM
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="nom"
+
+Xaragne
+--boundary
+Content-Disposition: form-data; name="prenom"
+
+Lo
+--boundary
+Content-Disposition: form-data; name="telephone"
+
+709653139
+--boundary
+Content-Disposition: form-data; name="adresse"
+
+Medina
+--boundary
+Content-Disposition: form-data; name="photo"
+
+https://res.cloudinary.com/dnnul9xza/image/upload/v1725712738/clients/cnxdddxwvmvsb4etncx8.jpg
+--boundary--
+
+Content-Disposition: form-data; name="categorieId"
+
+3
+--boundary
+###
+
+GET http://localhost:3000/api/clients/7/dettes
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjAsImxvZ2luIjoia2hhZGlqYUBnbWFpbC5jb20iLCJyb2xlIjoiQk9VVElRVUlFUiIsInByZW5vbSI6IktoYWRpamEiLCJub20iOiJCYSIsImNsaWVudElkIjo5LCJpYXQiOjE3Mjc3OTQ2MTEsImV4cCI6MTcyNzg4MTAxMX0.EkWsnbvtWQPSng60HLhMjHmyzZIdblGCjz1PDgztf9g
+
+###
+
+GET http://localhost:3000/api/clients/dette
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjAsImxvZ2luIjoia2hhZGlqYUBnbWFpbC5jb20iLCJyb2xlIjoiQk9VVElRVUlFUiIsInByZW5vbSI6IktoYWRpamEiLCJub20iOiJCYSIsImNsaWVudElkIjo5LCJpYXQiOjE3Mjc3OTQ2MTEsImV4cCI6MTcyNzg4MTAxMX0.EkWsnbvtWQPSng60HLhMjHmyzZIdblGCjz1PDgztf9g
+
+###
+
+GET http://localhost:3000/api/clients/4/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibG9naW4iOiJtYXJhbWVAZ21haWwuY29tIiwicm9sZSI6IkJPVVRJUVVJRVIiLCJwcmVub20iOiJNYXJhbWUiLCJub20iOiJCYSIsImNsaWVudElkIjo1LCJpYXQiOjE3MjY2NjkzODAsImV4cCI6MTcyNjc1NTc4MH0.o-4n7JPS26Rqzu0kfFXgEQqjwM5mmS8xvN_b1jv-Tv4
+
+###
+
+GET http://localhost:3000/api/clients/7
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjAsImxvZ2luIjoia2hhZGlqYUBnbWFpbC5jb20iLCJyb2xlIjoiQk9VVElRVUlFUiIsInByZW5vbSI6IktoYWRpamEiLCJub20iOiJCYSIsImNsaWVudElkIjo5LCJpYXQiOjE3Mjc3OTQ2MTEsImV4cCI6MTcyNzg4MTAxMX0.EkWsnbvtWQPSng60HLhMjHmyzZIdblGCjz1PDgztf9g
+
+###

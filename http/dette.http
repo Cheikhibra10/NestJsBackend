@@ -1,0 +1,83 @@
+POST http://localhost:3000/api/dettes/demande
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibG9naW4iOiJkaWFycmExQGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsInByZW5vbSI6Ik5kaWF5ZSIsIm5vbSI6IkRpYXJyYSIsImNsaWVudElkIjoyLCJpYXQiOjE3Mjc2MzA0NTEsImV4cCI6MTcyNzcxNjg1MX0.xCu5f4Wa6qCUgDP_5tvfup3OtLKZWKAqndZacs7IefM
+
+{
+    "clientId": 1,
+    "articles": [
+        {
+        "id": 1,  
+        "qteVente": 10,
+        "prixVente": 100
+        },
+         {
+        "id": 2,  
+        "qteVente": 10,
+        "prixVente": 300
+        }
+    ]
+}
+
+###
+
+POST http://localhost:3000/api/dettes/demande
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjMsImxvZ2luIjoiZGVtYmExQGdtYWlsLmNvbSIsInJvbGUiOiJDTElFTlQiLCJwcmVub20iOiJEZW1iYSIsIm5vbSI6IkZheWUiLCJjbGllbnRJZCI6NywiaWF0IjoxNzI3ODM1NjI5LCJleHAiOjE3Mjc5MjIwMjl9.S4070uwhYoinaFzhNrGnjE0v2iicGdF-XH1XrimsShI
+
+
+###
+
+GET http://localhost:3000/api/dettes/demandes/client
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjAsImxvZ2luIjoia2hhZGlqYUBnbWFpbC5jb20iLCJyb2xlIjoiQk9VVElRVUlFUiIsInByZW5vbSI6IktoYWRpamEiLCJub20iOiJCYSIsImNsaWVudElkIjo5LCJpYXQiOjE3Mjc4ODE3MTIsImV4cCI6MTcyNzk2ODExMn0.x51I49F-iz6NUmvmuVNu9sOC_ICXEllaFasY-HAUWio
+###
+
+GET http://localhost:3000/api/dettes
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjAsImxvZ2luIjoia2hhZGlqYUBnbWFpbC5jb20iLCJyb2xlIjoiQk9VVElRVUlFUiIsInByZW5vbSI6IktoYWRpamEiLCJub20iOiJCYSIsImNsaWVudElkIjo5LCJpYXQiOjE3Mjc3OTQ2MTEsImV4cCI6MTcyNzg4MTAxMX0.EkWsnbvtWQPSng60HLhMjHmyzZIdblGCjz1PDgztf9g
+
+###
+
+PUT http://localhost:3000/api/dettes/16/paiements
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibG9naW4iOiJtYXJhbWVAZ21haWwuY29tIiwicm9sZSI6IkJPVVRJUVVJRVIiLCJwcmVub20iOiJNYXJhbWUiLCJub20iOiJCYSIsImNsaWVudElkIjo1LCJpYXQiOjE3MjcyNzg5ODcsImV4cCI6MTcyNzM2NTM4N30.yCwruDNxFpqVWeTES-qqDx5jUN_jSb48DDiz4EbDdm8
+{
+  "montant": 250000 
+}
+
+###
+
+PATCH  http://localhost:3000/api/dettes/5/status
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjAsImxvZ2luIjoia2hhZGlqYUBnbWFpbC5jb20iLCJyb2xlIjoiQk9VVElRVUlFUiIsInByZW5vbSI6IktoYWRpamEiLCJub20iOiJCYSIsImNsaWVudElkIjo5LCJpYXQiOjE3Mjc3MDQ1NzQsImV4cCI6MTcyNzc5MDk3NH0.FQZ8VB-kqEiKQTQ3o85obx9DQNsLpqw1wQtEQAm-zLk
+
+{
+  "status": "EN_COURS"
+} 
+
+###
+
+GET http://localhost:3000/api/dettes/16/paiements
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibG9naW4iOiJtYXJhbWVAZ21haWwuY29tIiwicm9sZSI6IkJPVVRJUVVJRVIiLCJwcmVub20iOiJNYXJhbWUiLCJub20iOiJCYSIsImNsaWVudElkIjo1LCJpYXQiOjE3MjcyNzg5ODcsImV4cCI6MTcyNzM2NTM4N30.yCwruDNxFpqVWeTES-qqDx5jUN_jSb48DDiz4EbDdm8
+###
+
+GET http://localhost:3000/api/dettes/7/demande/articles
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjAsImxvZ2luIjoia2hhZGlqYUBnbWFpbC5jb20iLCJyb2xlIjoiQk9VVElRVUlFUiIsInByZW5vbSI6IktoYWRpamEiLCJub20iOiJCYSIsImNsaWVudElkIjo5LCJpYXQiOjE3Mjc4ODE3MTIsImV4cCI6MTcyNzk2ODExMn0.x51I49F-iz6NUmvmuVNu9sOC_ICXEllaFasY-HAUWio
+
+###
+
+GET http://localhost:3000/api/dettes/7
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjAsImxvZ2luIjoia2hhZGlqYUBnbWFpbC5jb20iLCJyb2xlIjoiQk9VVElRVUlFUiIsInByZW5vbSI6IktoYWRpamEiLCJub20iOiJCYSIsImNsaWVudElkIjo5LCJpYXQiOjE3Mjc3OTQ2MTEsImV4cCI6MTcyNzg4MTAxMX0.EkWsnbvtWQPSng60HLhMjHmyzZIdblGCjz1PDgztf9g
+
+###
+
+PATCH  http://localhost:3000/api/dettes/44/cancel
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibG9naW4iOiJtYXJhbWVAZ21haWwuY29tIiwicm9sZSI6IkJPVVRJUVVJRVIiLCJwcmVub20iOiJNYXJhbWUiLCJub20iOiJCYSIsImNsaWVudElkIjo1LCJpYXQiOjE3MjcyNzg5ODcsImV4cCI6MTcyNzM2NTM4N30.yCwruDNxFpqVWeTES-qqDx5jUN_jSb48DDiz4EbDdm8
+
+{
+  "status": "ANNULE"
+}
+
+
+###
+
+DELETE http://localhost:3000/api/dettes/31
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjAsImxvZ2luIjoia2hhZGlqYUBnbWFpbC5jb20iLCJyb2xlIjoiQk9VVElRVUlFUiIsInByZW5vbSI6IktoYWRpamEiLCJub20iOiJCYSIsImNsaWVudElkIjo5LCJpYXQiOjE3Mjc3OTQ2MTEsImV4cCI6MTcyNzg4MTAxMX0.EkWsnbvtWQPSng60HLhMjHmyzZIdblGCjz1PDgztf9g

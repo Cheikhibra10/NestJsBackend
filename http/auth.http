@@ -1,0 +1,21 @@
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsImxvZ2luIjoiUmFtYSIsInJvbGUiOiJBRE1JTiIsInByZW5vbSI6IkJhYmEiLCJub20iOiJOZG95ZSIsImNsaWVudElkIjoxOCwiaWF0IjoxNzI1OTc1MTU0LCJleHAiOjE3MjYwNjE1NTR9.6LyIAJh05nFbnBGFSnSjzdMAJqQyYKn7uwk7ppLACqs
+
+{
+  "login": "khadija@gmail.com",
+  "password": "passer",
+  "role": "BOUTIQUIER",
+  "clientId": 9
+}
+
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "login": "khadija@gmail.com",
+    "password": "passer"
+}

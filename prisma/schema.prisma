@@ -1,0 +1,113 @@
+// Updated Prisma schema file
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id               Int       @id @default(autoincrement())
+  login            String    @unique
+  password         String
+  role             Role      @default(CLIENT)
+  createAt         DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+  clientId         Int
+  client           Client    @relation("ClientToUser", fields: [clientId], references: [id])
+}
+
+model Client {
+  id              Int              @id @default(autoincrement())
+  nom             String           
+  prenom          String
+  telephone       String           @unique
+  createAt        DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+  adresse         String?          // Optional field to store client's address
+  photo           String?          // Optional field to store photo path or URL
+  users           User[]           @relation("ClientToUser")
+  dettes          Dette[]
+  categorieId     Int              @default(3) // Default category to Bronze (id = 3)
+  categorie       Categorie        @relation(fields: [categorieId], references: [id])
+  max_montant     Float?           // Max amount for Silver clients
+  notifications   Notification[]   // Add this relation field for Notification model
+}
+
+model Categorie {
+  id          Int       @id @default(autoincrement())
+  libelle     String    @unique
+  clients     Client[]
+}
+
+model Notification {
+  id        Int      @id @default(autoincrement())
+  message   String
+  clientId  Int
+  client    Client   @relation(fields: [clientId], references: [id])
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+
+model Article {
+  id            Int                @id @default(autoincrement())
+  libelle       String             @unique
+  prix          Float
+  qteStock      Float
+  createAt      DateTime           @default(now())
+  updatedAt     DateTime           @updatedAt
+  detteArticles ArticleOnDettes[]  @relation("ArticleOnDettesArticle")
+}
+
+model ArticleOnDettes {
+  id            Int       @id @default(autoincrement())
+  articleId     Int
+  detteId       Int
+  qteVente      Float
+  prixVente     Float
+  article       Article   @relation("ArticleOnDettesArticle", fields: [articleId], references: [id])
+  dette         Dette     @relation("ArticleOnDettesDette", fields: [detteId], references: [id])
+}
+
+model Dette {
+  id               Int               @id @default(autoincrement())
+  date             DateTime          @default(now())
+  montant          Float
+  montantVerser    Float             @default(0)
+  montantDue       Float             @default(0)
+  clientId         Int
+  createAt         DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+  paiements        Paiement[]
+  client           Client            @relation(fields: [clientId], references: [id])
+  articles         ArticleOnDettes[] @relation("ArticleOnDettesDette")
+  status           DemandeStatus     @default(EN_COURS)
+  relanceAllowedUntil DateTime?      // Optional date to track relance window
+}
+
+enum DemandeStatus {
+  EN_COURS
+  ANNULE
+  ACCEPTE
+}
+
+enum Role {
+  CLIENT
+  BOUTIQUIER
+  ADMIN
+}
+
+model Paiement {
+  id              Int       @id @default(autoincrement())
+  date            DateTime  @default(now())
+  montant         Int
+  createAt        DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+  detteId         Int
+  dette           Dette     @relation(fields: [detteId], references: [id])
+}
+

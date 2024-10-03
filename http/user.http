@@ -1,0 +1,32 @@
+POST http://localhost:3000/api/users
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJtb2R1QGdtYWlsLmNvbSIsInJvbGUiOiJCT1VUSVFVSUVSIiwicHJlbm9tIjoiQ2lzc2UiLCJub20iOiJNb2R1IiwiY2xpZW50SWQiOjEsImlhdCI6MTcyNzQ2NTc4NSwiZXhwIjoxNzI3NTUyMTg1fQ.lSg9cgWnL3L5Fs7bg9qzHW1r5AAUzjQS8StSsAk4RWM
+
+{
+    "login": "babou@gmail.com",
+    "password": "passer",
+    "role": "CLIENT",
+    "clientId": 3
+}
+
+###
+
+GET http://localhost:3000/api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJtb2R1QGdtYWlsLmNvbSIsInJvbGUiOiJCT1VUSVFVSUVSIiwicHJlbm9tIjoiQ2lzc2UiLCJub20iOiJNb2R1IiwiY2xpZW50SWQiOjEsImlhdCI6MTcyNzQ2NTc4NSwiZXhwIjoxNzI3NTUyMTg1fQ.lSg9cgWnL3L5Fs7bg9qzHW1r5AAUzjQS8StSsAk4RWM
+###
+
+GET http://localhost:3000/api/users/by-role/?role=CLIENT
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibG9naW4iOiJtYXJhbWVAZ21haWwuY29tIiwicm9sZSI6IkJPVVRJUVVJRVIiLCJwcmVub20iOiJNYXJhbWUiLCJub20iOiJCYSIsImNsaWVudElkIjo1LCJpYXQiOjE3MjcwNTY0NTEsImV4cCI6MTcyNzE0Mjg1MX0.g96tEPDwB2NDCFc0Mz_FHsFfa96A4YrxqNwCpuQmGQw
+
+###
+
+PUT http://localhost:3000/api/users/11
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibG9naW4iOiJtYXJhbWUiLCJyb2xlIjoiQk9VVElRVUlFUiIsInByZW5vbSI6Ik1hcmFtZSIsIm5vbSI6IkJhIiwiY2xpZW50SWQiOjUsImlhdCI6MTcyNjMxODQ4NSwiZXhwIjoxNzI2NDA0ODg1fQ.yMPddpXbJXEZ4TVSXkldsKeyBrqYVk1l4hjoLFeF3bE
+
+{ 
+    "role": "BOUTIQUIER", 
+    "clientId": 16 
+}
+

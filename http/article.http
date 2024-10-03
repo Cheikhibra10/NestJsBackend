@@ -1,0 +1,34 @@
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJtb2R1QGdtYWlsLmNvbSIsInJvbGUiOiJCT1VUSVFVSUVSIiwicHJlbm9tIjoiQ2lzc2UiLCJub20iOiJNb2R1IiwiY2xpZW50SWQiOjEsImlhdCI6MTcyNzQxMjcwMCwiZXhwIjoxNzI3NDk5MTAwfQ.iU89mQOlTTribnmiVlJPRclxj3Yhp5AEeHH99CiZWKg
+
+{
+    "libelle": "Boisson 1L",
+    "prix": 1000,
+    "qteStock": 200
+}
+
+###
+
+GET http://localhost:3000/api/articles/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibG9naW4iOiJtYXJhbWVAZ21haWwuY29tIiwicm9sZSI6IkJPVVRJUVVJRVIiLCJwcmVub20iOiJNYXJhbWUiLCJub20iOiJCYSIsImNsaWVudElkIjo1LCJpYXQiOjE3MjcyODE5MTAsImV4cCI6MTcyNzM2ODMxMH0.fiFDBV6NEkefj3g6Syydqwm84SNg8VaLUPzgZSJLeDU
+
+###
+
+GET http://localhost:3000/api/articles/25
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibG9naW4iOiJtYXJhbWVAZ21haWwuY29tIiwicm9sZSI6IkJPVVRJUVVJRVIiLCJwcmVub20iOiJNYXJhbWUiLCJub20iOiJCYSIsImNsaWVudElkIjo1LCJpYXQiOjE3MjcyODE5MTAsImV4cCI6MTcyNzM2ODMxMH0.fiFDBV6NEkefj3g6Syydqwm84SNg8VaLUPzgZSJLeDU
+
+###
+
+GET http://localhost:3000/api/articles/Lait%20Laicran%20600g
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJjaGVpa2giLCJyb2xlIjoiQk9VVElRVUlFUiIsImlhdCI6MTcyNTUzODU0NCwiZXhwIjoxNzI1NjI0OTQ0fQ.CvY1L-SUANDHUOQbrU81E2tZae67sA6OZAHJja0FhLg
+
+###
+
+PUT http://localhost:3000/api/articles/08/stock
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJtb2R1QGdtYWlsLmNvbSIsInJvbGUiOiJCT1VUSVFVSUVSIiwicHJlbm9tIjoiQ2lzc2UiLCJub20iOiJNb2R1IiwiY2xpZW50SWQiOjEsImlhdCI6MTcyNzQxMjcwMCwiZXhwIjoxNzI3NDk5MTAwfQ.iU89mQOlTTribnmiVlJPRclxj3Yhp5AEeHH99CiZWKg
+
+{
+    "qteStock": 15
+}

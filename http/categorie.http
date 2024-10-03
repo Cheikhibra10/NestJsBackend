@@ -1,0 +1,13 @@
+POST http://localhost:3000/api/categories/seed
+
+###
+
+POST http://localhost:3000/api/clients/create
+Content-Type: application/json
+
+{
+  "nom": "Baba",
+  "prenom": "Ndiaye",
+  "telephone": "785555555",
+  "adresse": "Dakar"
+  }
