@@ -10,8 +10,7 @@ export class CategorieController {
 
   // API to seed the categories
   @Post('seed')
-  @UseGuards(AuthGuard, RolesGuard)
-  @Roles('BOUTIQUIER', 'ADMIN')
+
   async seedCategories() {
     return this.categorieService.seedCategories();
   }

@@ -29,8 +29,8 @@ import { ClientService } from 'src/services/clients/client.service';
     constructor(private readonly clientService: ClientService) {}
   
   @Post('create')
-  @UseGuards(AuthGuard, RolesGuard)
-  @Roles('BOUTIQUIER', 'ADMIN')
+  // @UseGuards(AuthGuard, RolesGuard)
+  // @Roles('BOUTIQUIER', 'ADMIN')
   async createClient(@Body() createClientDto: Client) {
     return this.clientService.createClientCategory(createClientDto);
   }
